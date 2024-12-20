@@ -229,12 +229,133 @@ h1{
 
 /***** End Main Section *****/
 
+/********************** Footer Section *********************/ 
+
+footer {
+    background-color: rgb(115, 80, 57); 
+    color: white; 
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.footer-about {
+    max-width: 500px;
+}
+
+.footer-about h3 {
+    margin-top: 8px;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.footer-about p {
+    font-size: 18px;
+    line-height: 1.6;
+    /* margin-top: 5px; */
+    font-family: Inter, sans-serif;
+}
+
+.footer-about img {
+    margin-top: 8px;
+    max-width: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+.footer-contact-us , 
+.footer-social h3 {
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    color: white;
+}
+
+.footer-contact-us {
+    margin: auto;
+    margin-top: 30px;
+    padding-right: 50px;
+}
+
+.footer-contact-us ul {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    line-height: 35px;
+}
+
+.footer-contact-us ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.footer-contact-us ul li {
+    font-size: 18px;
+}
+
+.footer-contact-us .fa-solid {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.footer-social {
+    margin: auto;
+    margin-top: 30px;
+    margin: 0 ;
+}
+
+.footer-social-icons {
+    margin-top: 20px;
+}
+
+.footer-social .footer-social-icons a {
+    font-size: 29px;
+    margin-right: 20px;
+    color: azure;
+}
+
+.footer-social-icons .fa-whatsapp {
+    color: #128C7E;
+}
+
+.footer-social-icons .fa-instagram {
+    color: #833AB4;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: rgb(221, 227, 227);
+    border-top: 1px solid #ba9e9e;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+}
+
+ /***** End Footer Section *****/
+
 
 
 /***** START RESPONSIVE Section *****/ 
 
 /* Responsive styles for smaller screens */
-@media (max-width: 1200px) {
+@media (max-width: 1200px) { /*	Monitors, Desktops*/
+    /* NavBar */
     .nav-links ul {
         font-size: 14px;
         padding: 5px 6px 0px 40px; 
@@ -243,6 +364,21 @@ h1{
         margin-right: 40px;
         gap: 40px;
     }
+    /* Footer */
+    .footer-container { 
+        flex-direction: column; align-items: center; 
+    } 
+    .footer-about{ 
+        max-width: 80%; margin-bottom: 20px; 
+    }
+    .footer-contact-us{ 
+        max-width: 80%; margin-bottom: 20px; 
+    }
+    .footer-social { 
+        max-width: 80%; margin-bottom: 20px; 
+    }
+
+    /* OurRiceMill */
     .container {
         margin: 0% 15% 15%;
     }
@@ -258,9 +394,11 @@ h1{
     .infra-images img {
         width: 300px;
     }
+
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) { /*Laptops and Desktops*/
+    /* NavBar */
     .template-text{
         margin-left: -70px;
     }
@@ -275,6 +413,26 @@ h1{
     .template-text {
         left: 20%;
     }
+    /* Footer */
+    .footer-about h3{ 
+        font-size: 25px; 
+    } 
+    .footer-contact-us h3{ 
+        font-size: 25px; 
+    } 
+    .footer-social h3 { 
+        font-size: 25px; 
+    } 
+    .footer-about p{ 
+        font-size: 16px; 
+    } 
+    .footer-contact-us ul li{ 
+        font-size: 16px; 
+    } 
+    .footer-contact-us ul li a { 
+        font-size: 16px; 
+    }
+    /* OurRiceMill */
     .container {
         margin: 0% 10% 10%;
     }
@@ -299,7 +457,8 @@ h1{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {  /*Tablets*/
+    /* NavBar */
     .template-text{
         margin-left: -70px;
     }
@@ -314,6 +473,29 @@ h1{
     .template-text {
         left: 15%;
     }
+    /* Footer */
+    .footer-container { 
+        padding: 0 10px; 
+    } 
+    .footer-about h3{ 
+        font-size: 22px; 
+    } 
+    .footer-contact-us h3{ 
+        font-size: 22px; 
+    } 
+    .footer-social h3 {
+        font-size: 22px; 
+    } 
+    .footer-about p{ 
+        font-size: 14px; 
+    } 
+    .footer-contact-us ul li{ 
+        font-size: 14px; 
+    } 
+    .footer-contact-us ul li a { 
+        font-size: 14px; 
+    }
+    /* OurRiceMill */
     .container {
         margin: 0% 5% 5%;
     }
@@ -345,7 +527,8 @@ h1{
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) { /*Tablets and Phones*/
+    /* NavBar */
     .nav-links ul {
         flex-direction: column;
         align-items: center;
@@ -358,6 +541,33 @@ h1{
         margin-right: 10px;
         gap: 10px;
     }
+    /* Footer */
+    .footer-container { 
+        padding: 0 5px; 
+    } 
+    .footer-about h3 { 
+        font-size: 20px; 
+    } 
+    .footer-contact-us h3{ 
+        font-size: 20px; 
+    } 
+    .footer-social h3 { 
+        font-size: 20px; 
+    } 
+    .footer-about p{ 
+        font-size: 12px; 
+    } 
+    .footer-contact-us ul li{ 
+        font-size: 12px; 
+    } 
+    .footer-contact-us ul li a { 
+        font-size: 12px; 
+    } 
+    .footer-social-icons a { 
+        font-size: 25px; margin-right: 15px; 
+    }
+
+    /* OurRiceMill */
     .template-container{
         margin-top: 100px;
     }
@@ -383,3 +593,5 @@ h1{
 
 
 /***** End RESPONSIVE Section *****/
+
+
