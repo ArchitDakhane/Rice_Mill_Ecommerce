@@ -142,6 +142,7 @@ a{
     margin:0% 20% 20% ; 
     word-spacing: 5px;
     padding-bottom: 40px;
+    margin-bottom: 0px;
     
 
 }
@@ -380,7 +381,7 @@ footer {
 
     /* OurRiceMill */
     .container {
-        margin: 0% 15% 15%;
+        margin: 0% 15% ;
     }
     .container p {
         font-size: 18px;
@@ -434,7 +435,7 @@ footer {
     }
     /* OurRiceMill */
     .container {
-        margin: 0% 10% 10%;
+        margin: 0% 10% ;
     }
     .container p {
         font-size: 16px;
@@ -497,7 +498,7 @@ footer {
     }
     /* OurRiceMill */
     .container {
-        margin: 0% 5% 5%;
+        margin: 0% 5% ;
     }
     .container p {
         font-size: 14px;
@@ -575,7 +576,7 @@ footer {
         left: 10%;
     }
     .container {
-        margin: 0% 2% 2%;
+        margin: 0% 2% ;
     }
     .container p {
         font-size: 12px;
