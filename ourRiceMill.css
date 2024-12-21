@@ -24,20 +24,19 @@ a{
     left: 0;
     width: 100%;
     background-color: white; 
-    z-index: 1;   
+    z-index: 1;  
 }
-.nav-links{
+.navbar .nav-links{
     display: flex;
-    padding: 5px 6px 0px 35px; 
-
+    flex-wrap: nowrap;
+    gap: 10%;
+    padding: 5px 6px 6px 35px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.184);
 }
 .nav-links ul {
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.184);
     font-weight: 600;
-    font-size:15px;
     display: flex;
     width: 100%;
-    padding: 0px 6px 0px 200px;
     justify-content: space-between;
     align-items: center;
     list-style: none;
@@ -46,6 +45,9 @@ a{
         position: relative;
     }   
 }
+.nav-links ul li {
+    margin: 0 10px;
+} 
 
 .nav-content::after{
     content: "";
@@ -68,9 +70,6 @@ a{
 .nav-content:hover::after{
     width: 100%;
 }
-.image{
-    border: none;
-}
 
 .nav-icons {
     margin-right: 60px;
@@ -86,13 +85,14 @@ a{
     }   
 }
 
-.image{
+.logo{
+    border: none;
     width: 80px;
-    border-radius:100%;
-    -webkit-border-radius:100%;
-    -moz-border-radius:100%;
-    -ms-border-radius:100%;
-    -o-border-radius:100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
 }
 
 /* Width of line is fixed ie. 100% ..........  */
@@ -119,14 +119,20 @@ a{
 .OurRiceMill .template-container img{
     height:700px;
     width: 100%; 
+    object-fit:cover;
     box-shadow: 9px 5px 9px black; 
 }
 .template-text{
     position: absolute;
-    top: 20%;
-    left: 26%;
+    top: 23%;
+    left: 50%;
     color: rgb(183, 198, 201);
     text-shadow: 1px 2px 2px gray;
+    transform: translate(-50%,-20%);
+    -webkit-transform: translate(-50%,-20%);
+    -moz-transform: translate(-50%,-20%);
+    -ms-transform: translate(-50%,-20%);
+    -o-transform: translate(-50%,-20%);
     & .p1{
         font-family: "Playfair Display", serif;
         font-size: 40px;   
@@ -134,40 +140,37 @@ a{
     & .p2{
         font-size: 60px;
         font-family: "Playfair Display", serif;      
-    } 
+    }
 }
 .container{
     color: #73513a;
-    
     margin:0% 20% 20% ; 
     word-spacing: 5px;
     padding-bottom: 40px;
     margin-bottom: 0px;
-    
-
 }
 
 h1{
     font-family: "Playfair Display", serif; 
     font-size: 40px;
     text-align: center;
-    margin: 50px 20px 20px 20px;
-    padding: 20px;
+    margin: 50px 0;
 }
 .container p{
     font-size: 20px;
-    margin: 0px 25px;
-    padding: 0px 10px;
+    margin: 0px 5%;
 }
 
 /* Infrastructure Details */
 .infra-details{
-    padding: 10px 2px 10px 50px;
+    padding: 20px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr,1fr));
     row-gap: 50px;
+    column-gap: 50px;
     & div{
         display: flex;
+        align-items: center;
     }
     & img{
         width: 140px;
@@ -175,13 +178,15 @@ h1{
 }
 
 .infra-details p{
-    padding-left:5px ;
+    /* padding-left:5px ;
     margin-left: 8px;
     margin-top: 70px;
-    font-size: 18px;
+    font-size: 18px; */
+    padding-left: 10px;
+    font-size: 1rem;
 }
 
-.block-1{
+/* .block-1{
     height:150px ;
     & p{
         margin-top: 60px;
@@ -203,19 +208,30 @@ h1{
     & p{
         margin-top: 50px;
     }
-}
+} */
+
+.block-1, .block-3, .block-4{
+    justify-content: center;
+}/*co*/
+.block-2 img{
+    /* width: 100%; */
+    /* height: auto; */
+}/*co*/
 
 /* Infrastructure Images */
 .infra-images{
     display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 70px;
+    /* grid-template-columns: auto auto; */
+    grid-template-columns: 1fr 1fr;
+    /* column-gap: 70px;
     row-gap: 70px;
-    margin: 9rem 0px 50px;
+    margin: 9rem 0px 50px; */
+    gap: 20px;/*co*/
+    padding: 0 10%;/*co*/
     justify-content: center;
     text-align: center;
 
-    & img{
+    /* & img{
         margin-bottom: 13px;
         width:360px;
         border-radius: 9px;
@@ -224,8 +240,19 @@ h1{
         -ms-border-radius: 9px;
         -o-border-radius: 9px;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.519);
-    }
+    } */
 }
+& img{
+    /* margin-bottom: 13px; */
+    width:100%;
+    height: auto;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.519);
+}/*co*/
 
 
 /***** End Main Section *****/
@@ -351,246 +378,7 @@ footer {
  /***** End Footer Section *****/
 
 
-
-/***** START RESPONSIVE Section *****/ 
-
-/* Responsive styles for smaller screens */
-@media (max-width: 1200px) { /*	Monitors, Desktops*/
-    /* NavBar */
-    .nav-links ul {
-        font-size: 14px;
-        padding: 5px 6px 0px 40px; 
-    }
-    .nav-icons {
-        margin-right: 40px;
-        gap: 40px;
-    }
-    /* Footer */
-    .footer-container { 
-        flex-direction: column; align-items: center; 
-    } 
-    .footer-about{ 
-        max-width: 80%; margin-bottom: 20px; 
-    }
-    .footer-contact-us{ 
-        max-width: 80%; margin-bottom: 20px; 
-    }
-    .footer-social { 
-        max-width: 80%; margin-bottom: 20px; 
-    }
-
-    /* OurRiceMill */
-    .container {
-        margin: 0% 15% ;
-    }
-    .container p {
-        font-size: 18px;
-    }
-    .infra-details p {
-        font-size: 16px;
-    }
-    .infra-details img {
-        width: 120px;
-    }
-    .infra-images img {
-        width: 300px;
-    }
-
-}
-
-@media (max-width: 992px) { /*Laptops and Desktops*/
-    /* NavBar */
-    .template-text{
-        margin-left: -70px;
-    }
-    .nav-links ul {
-        font-size: 13px;
-        padding: 5px 6px 0px 30px;
-    }
-    .nav-icons {
-        margin-right: 30px;
-        gap: 30px;
-    }
-    .template-text {
-        left: 20%;
-    }
-    /* Footer */
-    .footer-about h3{ 
-        font-size: 25px; 
-    } 
-    .footer-contact-us h3{ 
-        font-size: 25px; 
-    } 
-    .footer-social h3 { 
-        font-size: 25px; 
-    } 
-    .footer-about p{ 
-        font-size: 16px; 
-    } 
-    .footer-contact-us ul li{ 
-        font-size: 16px; 
-    } 
-    .footer-contact-us ul li a { 
-        font-size: 16px; 
-    }
-    /* OurRiceMill */
-    .container {
-        margin: 0% 10% ;
-    }
-    .container p {
-        font-size: 16px;
-    }
-    .infra-details {
-        grid-template-columns: auto;
-        padding: 10px 2px 10px 20px;
-    }
-    .infra-details img {
-        width: 100px;
-        height: 120px;
-    }
-    .infra-images {
-        grid-template-columns: auto;
-        column-gap: 50px;
-        row-gap: 50px;
-    }
-    .infra-images img {
-        width: 550px;
-    }
-}
-
-@media (max-width: 768px) {  /*Tablets*/
-    /* NavBar */
-    .template-text{
-        margin-left: -70px;
-    }
-    .nav-links ul {
-        font-size: 12px;
-        padding: 5px 6px 0px 20px;
-    }
-    .nav-icons {
-        margin-right: 20px;
-        gap: 20px;
-    }
-    .template-text {
-        left: 15%;
-    }
-    /* Footer */
-    .footer-container { 
-        padding: 0 10px; 
-    } 
-    .footer-about h3{ 
-        font-size: 22px; 
-    } 
-    .footer-contact-us h3{ 
-        font-size: 22px; 
-    } 
-    .footer-social h3 {
-        font-size: 22px; 
-    } 
-    .footer-about p{ 
-        font-size: 14px; 
-    } 
-    .footer-contact-us ul li{ 
-        font-size: 14px; 
-    } 
-    .footer-contact-us ul li a { 
-        font-size: 14px; 
-    }
-    /* OurRiceMill */
-    .container {
-        margin: 0% 5% ;
-    }
-    .container p {
-        font-size: 14px;
-    }
-    .infra-details {
-        padding: 10px 2px 10px 10px;
-    }
-    .infra-details p {
-        font-size: 14px;
-    }
-    .infra-details img {
-        width: 80px;
-        height: 100px;
-    }
-    .block-2,.block-4 {
-        margin-top: -40px;
-        & p{
-            margin-top: 60px;
-        }
-    }
-
-    .infra-images{
-        margin-top: 30px;
-    }
-    .infra-images img {
-        width: 500px;
-    }
-}
-
-@media (max-width: 600px) { /*Tablets and Phones*/
-    /* NavBar */
-    .nav-links ul {
-        flex-direction: column;
-        align-items: center;
-        font-size: 11px;
-    }
-    .nav-links ul a li {
-        margin: 5px 0px;
-    }
-    .nav-icons {
-        margin-right: 10px;
-        gap: 10px;
-    }
-    /* Footer */
-    .footer-container { 
-        padding: 0 5px; 
-    } 
-    .footer-about h3 { 
-        font-size: 20px; 
-    } 
-    .footer-contact-us h3{ 
-        font-size: 20px; 
-    } 
-    .footer-social h3 { 
-        font-size: 20px; 
-    } 
-    .footer-about p{ 
-        font-size: 12px; 
-    } 
-    .footer-contact-us ul li{ 
-        font-size: 12px; 
-    } 
-    .footer-contact-us ul li a { 
-        font-size: 12px; 
-    } 
-    .footer-social-icons a { 
-        font-size: 25px; margin-right: 15px; 
-    }
-
-    /* OurRiceMill */
-    .template-container{
-        margin-top: 100px;
-    }
-    .template-text {
-        left: 10%;
-    }
-    .container {
-        margin: 0% 2% ;
-    }
-    .container p {
-        font-size: 12px;
-    }
-    .infra-details p {
-        font-size: 15px;
-    }
-    .infra-details img {
-        width: 60px;
-    }
-    .infra-images img {
-        width: 350px;
-    }
-}
+ 
 
 
 /***** End RESPONSIVE Section *****/
