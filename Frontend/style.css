@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Inter, sans-serif;   
+    font-family: Inter, sans-serif; 
 }
 
 button:active{
@@ -225,13 +225,13 @@ a{
 
 /**** Innovation ****/
 
-.innovation-container {
-    background-color: rgb(245, 233, 213);
+.innovation-header {
     padding: 50px 0;
+    background-color: rgb(245, 233, 213);
     color: #73513a;
 }
- 
-.innovation-container h2 {
+
+.innovation-header h2 {
     text-align: center;
     font-family: "Playfair Display", serif;
     font-size: 44px;
@@ -240,7 +240,7 @@ a{
     margin-top: 20px;
 }
 
-.innovation-container p {
+.innovation-header p {
     font-family: Inter, sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -248,15 +248,27 @@ a{
     text-align: center;
 }
 
+.innovation-container {
+    background-color: rgb(245, 233, 213);
+    padding: 50px 0;
+    color: #73513a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+}
+ 
 .innovation-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 3fr);
     gap: 10px;
-    margin: 20px auto;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-left: 50px;
 }
 
 .innovation-cards .card {
-    border: 1px solid #ddd;
+    margin-right: 50px;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
@@ -264,16 +276,23 @@ a{
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    width: 50%;
-    
-
+    width: 70%;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 }
 
 .innovation-cards .card img {
-    width: auto;
+    width: 300px;
     height: 200px;
-
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 30px;
 }
+
+iframe {
+    margin-left: 50px;
+}
+
+
 
 
 
