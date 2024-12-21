@@ -1,15 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Inter, sans-serif; 
-}
-
-button:active{
-    transform: translateY(5px);
-    -webkit-transform: translateY(5px);
-    -moz-transform: translateY(5px);
-    -ms-transform: translateY(5px);
-    -o-transform: translateY(5px);
 }
 
 a{
@@ -26,23 +17,28 @@ a{
     left: 0;
     width: 100%;
     background-color: white; 
-    z-index: 1;
-    
+    z-index: 1;  
 }
 
 .nav-links ul {
+    font-family: Inter, sans-serif; 
     font-weight: 600;
     font-size:15px;
     display: flex;
     justify-content:  space-between;
     align-items: center;
-    padding: 5px 6px 0px 60px; 
+    /* padding: 5px 6px 0px 60px;  */
     list-style: none;
 
     & a li{
         position: relative;
     }
     
+}
+
+.nav-content {
+    position: relative;
+    font-weight: bold;
 }
 
 .nav-content::after{
@@ -70,9 +66,11 @@ a{
 
 .image{
     border: none;
+    margin-left: 20px;
 }
 
 .nav-icons {
+    display: none;
     margin-right: 60px;
     display: flex;
     justify-content: flex-end;
@@ -95,6 +93,37 @@ a{
     -o-border-radius:100%;
 }
 
+button:active{
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+}
+
+@media screen and (max-width: 600px) {
+    .navbar ul:not(:first-child) {display: none}
+    .navbar .nav-icons {
+        float: right;
+        display: block;
+    }   
+}
+
+@media screen and (max-width:600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
 
 /************************ End Navbar Section *****************/
 
@@ -106,14 +135,14 @@ a{
 /**** Slideshow Container ****/
 
 .slideshow-container {
-    max-width: 100%;
+    width: 100%;
     position: relative;
     margin: auto;
 }
 
 .mySlides img {
     width: 100%;
-    height: auto;
+    height: 800px;
     object-fit: cover;
 }
 
@@ -164,6 +193,8 @@ a{
     display: flex;
     background-color: rgb(245, 233, 213);
     color: #73513a;
+    /* flex: 1 1 20%;
+    min-width: 500px; */
 }
 
 .aboutUs-container .header {
@@ -194,11 +225,9 @@ a{
     height: 30%;
 }
 
-
-
 .stats {
     display: flex;
-    gap: 270px;
+    gap: 20%;
     align-items: center;
     padding: 30px 0;
     background-color: rgb(245, 233, 213);
@@ -265,6 +294,7 @@ a{
     margin: 0 auto;
     max-width: 1200px;
     margin-left: 50px;
+    line-height: 1.6rem;
 }
 
 .innovation-cards .card {
