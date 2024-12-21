@@ -106,6 +106,21 @@ a{
     border-bottom: 3px solid #73513a;
 }
 
+/* menu toggle */
+/* Menu toggle button for mobile view */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+}
+
 /***** End Nav Section *****/
 
 /***** Start Main Section *****/ 
@@ -118,7 +133,7 @@ a{
 }
 .OurRiceMill .template-container img{
     height:700px;
-    width: 100%; 
+    width:100%; 
     object-fit:cover;
     box-shadow: 9px 5px 9px black; 
 }
@@ -163,9 +178,10 @@ h1{
 
 /* Infrastructure Details */
 .infra-details{
+    margin-bottom: 15%;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     row-gap: 50px;
     column-gap: 50px;
     & div{
@@ -174,86 +190,47 @@ h1{
     }
     & img{
         width: 140px;
+        box-shadow: none;
     }  
 }
 
 .infra-details p{
-    /* padding-left:5px ;
+    padding-left:5px ;
     margin-left: 8px;
-    margin-top: 70px;
-    font-size: 18px; */
-    padding-left: 10px;
-    font-size: 1rem;
+    margin-top: 55px;
+    font-size: 18px;
 }
 
-/* .block-1{
-    height:150px ;
-    & p{
-        margin-top: 60px;
-    }
-    
-}
-.block-2 img{
-    width: 145px;
-    height: 170px;
-}
-.block-3 {
-    height: 130px;
-    & p{
-        margin-top: 50px;
-    }
-}
-.block-4 {
-    height:140px ;
-    & p{
-        margin-top: 50px;
-    }
-} */
-
-.block-1, .block-3, .block-4{
+.block-1,.block-2, .block-3, .block-4{
     justify-content: center;
-}/*co*/
+}
 .block-2 img{
-    /* width: 100%; */
-    /* height: auto; */
-}/*co*/
+    padding-top: 10%;
+}
+
 
 /* Infrastructure Images */
 .infra-images{
     display: grid;
-    /* grid-template-columns: auto auto; */
-    grid-template-columns: 1fr 1fr;
-    /* column-gap: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    column-gap: 70px;
     row-gap: 70px;
-    margin: 9rem 0px 50px; */
-    gap: 20px;/*co*/
-    padding: 0 10%;/*co*/
+    margin: 9rem 0px 50px;
     justify-content: center;
     text-align: center;
 
-    /* & img{
+    & img{
         margin-bottom: 13px;
-        width:360px;
+        width:100%;
+        height: auto;
         border-radius: 9px;
         -webkit-border-radius: 9px;
         -moz-border-radius: 9px;
         -ms-border-radius: 9px;
         -o-border-radius: 9px;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.519);
-    } */
+    }
 }
-& img{
-    /* margin-bottom: 13px; */
-    width:100%;
-    height: auto;
-    border-radius: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    -ms-border-radius: 9px;
-    -o-border-radius: 9px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.519);
-}/*co*/
-
 
 /***** End Main Section *****/
 
@@ -383,4 +360,8 @@ footer {
 
 /***** End RESPONSIVE Section *****/
 
-
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+}
