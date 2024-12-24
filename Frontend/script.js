@@ -1,14 +1,6 @@
 // Navbar
 
-function navbar() {
-    var x = document.getElementById("myTopnav")
-    if (x.className == "navbar") {
-        x.className += " responsive"
-    }
-    else {
-        x.className = "navbar"
-    }
-}
+
 
 
 // Slideshows
@@ -27,4 +19,32 @@ window.onload = function() {
             setTimeout(showSlides, 4000)
         }
 }
+
+
+
+// Stats
+
+document.addEventListener("DOMContentLoaded", () => {
+    const stats = document.querySelectorAll(".stat h3");
+
+    stats.forEach(stat => {
+        const endValue = parseInt(stat.textContent.replace(/\D/g, ""));
+        let currentValue = 0;
+        const increment = Math.ceil(endValue / 100); // Divide the total value into 100 increments
+
+        const updateValue = () => {
+            currentValue += increment;
+            if (currentValue >= endValue) {
+                currentValue = endValue;
+                clearInterval(timer);
+            }
+            stat.textContent = currentValue + "+";
+        };
+
+        const timer = setInterval(updateValue, 20); // Update every 20ms
+    });
+});
+
+
+
 
