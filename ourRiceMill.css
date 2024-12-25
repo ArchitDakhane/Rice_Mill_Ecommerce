@@ -30,7 +30,7 @@ a{
     display: flex;
     flex-wrap: nowrap;
     gap: 10%;
-    padding: 5px 6px 6px 35px; 
+    padding: 0px 6px 0px 35px; 
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.184);
 }
 .nav-links ul {
@@ -87,12 +87,9 @@ a{
 
 .logo{
     border: none;
-    width: 80px;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
+    width: 100px;
+    padding: 0px;
+    margin: -10px;
 }
 
 /* Width of line is fixed ie. 100% ..........  */
@@ -108,7 +105,7 @@ a{
 
 /* menu toggle */
 /* Menu toggle button for mobile view */
-.menu-toggle {
+/* .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -119,7 +116,7 @@ a{
     height: 3px;
     width: 25px;
     margin: 5px;
-}
+} */
 
 /***** End Nav Section *****/
 
@@ -127,11 +124,12 @@ a{
 .OurRiceMill{
     background-color: rgb(245, 233, 213);
 }
+
 .template-container{
     position: relative;
     text-align: center;   
 }
-.OurRiceMill .template-container img{
+.template-container img{
     height:700px;
     width:100%; 
     object-fit:cover;
@@ -163,8 +161,8 @@ a{
     word-spacing: 5px;
     padding-bottom: 40px;
     margin-bottom: 0px;
+    text-align: center;
 }
-
 h1{
     font-family: "Playfair Display", serif; 
     font-size: 40px;
@@ -173,8 +171,34 @@ h1{
 }
 .container p{
     font-size: 20px;
-    margin: 0px 5%;
+    margin: 0% 5%;
+    text-align: start;
 }
+.export-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    align-items: center;
+    place-self: center;
+    gap: 2px;
+    margin: 0% 5%;
+}
+.export-content {
+    & img{
+        width: 350px;
+        height: 300px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        margin: 0px -20px 60px 50px;
+    }
+    & p{
+        margin:-10% 0% 0% 8px;
+    }
+}
+
+/*......... Start css of ourRiceMill page Section .........*/  
 
 /* Infrastructure Details */
 .infra-details{
@@ -191,7 +215,7 @@ h1{
     & img{
         width: 140px;
         box-shadow: none;
-    }  
+    }
 }
 
 .infra-details p{
@@ -231,6 +255,52 @@ h1{
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.519);
     }
 }
+
+/*............ End css of ourRiceMill page Section ..................*/
+
+/*........................Start css of Export page Section ........................*/ 
+
+.export-details{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    column-gap: 4%;
+    row-gap: 9%;
+    place-items: center;
+    margin-bottom: 15%;
+    
+    & p{
+        font-size: large;
+       justify-items: center;
+    } 
+
+    & img{
+        width: 140px;
+    }
+    & .block-2{
+        margin-top: 1px;
+        & p {
+            margin-top: 0px;
+        }
+        
+    }
+    & .block-4{
+        align-items: center;
+        margin-top: 15px;
+        & p {
+            margin-top: 0px;
+        }
+    }
+}
+
+.export-form{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax( 260px,1fr));
+}
+
+/*........................ End css of Export page Export Section ........................*/
+
+
 
 /***** End Main Section *****/
 
@@ -599,8 +669,8 @@ footer {
 
 /***** End RESPONSIVE Section *****/
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
-}
+} */
