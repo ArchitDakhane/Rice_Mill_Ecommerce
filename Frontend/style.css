@@ -505,6 +505,126 @@ button:active{
 
 /*********************** End Home Section ********************/
 
+/***** Cart Section *****/ 
+
+.cart-header {
+    margin-top: 100px;
+    color: #73513a;
+    text-align: center;
+}
+
+.cart-page {
+    margin: 80px auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    color: #73513a;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgb(245, 233, 213);
+}
+
+td {
+    padding: 10px 5px;
+}
+
+td input {
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a {
+    color: red;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+td img {
+    width: 30%;
+    height: 150px;
+    margin-right: 15px;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.total-price table {
+    border-top: 3px solid #73513a;
+    width: 100%;
+    max-width: 400px;
+    padding-top: 10px;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+.checkout-btn {
+    margin-top: 20px;
+    text-align: center;
+    height: 30px;
+}
+
+.checkout-btn .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.checkout-btn .btn:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+    .cart-info p {
+        display: block;
+    }
+    /* img {
+        width: 50%;
+    } */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/***** Cart End Section *****/
+
+
 
 
 

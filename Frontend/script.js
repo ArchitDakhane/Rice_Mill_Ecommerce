@@ -46,13 +46,65 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Cart
-document.querySelectorAll('.cart-container a').forEach(function(link) {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        var row = link.parentElement.parentElement;
-        row.parentElement.removeChild(row);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const quantities = document.querySelectorAll('.quantity');
+    const removeButtons = document.querySelectorAll('.remove-item');
+    const subtotalElement = document.getElementById('subtotal');
+    const totalElement = document.getElementById('total');
+    const deliveryCharges = 100; 
+
+    const prices = [
+        { price: 450 },
+        { price: 350 },
+        { price: 550 }
+    ];
+
+    // Function to update the subtotal and total price
+    function updatePrices() {
+        let subtotal = 0;
+
+        // Loop through each product row and update subtotal for each item
+        const rows = document.querySelectorAll('#cart-table tbody tr');
+        rows.forEach((row, index) => {
+            const quantityInput = row.querySelector('.quantity');
+            const quantity = parseInt(quantityInput.value) || 0; 
+            const itemPrice = prices[index].price; 
+            const itemSubtotal = itemPrice * quantity; 
+            subtotal += itemSubtotal;
+
+            row.querySelector('.subtotal').textContent = `Rs. ${itemSubtotal}`;
+        });
+
+        const total = subtotal + deliveryCharges;
+
+        subtotalElement.textContent = `Rs. ${subtotal}`;
+        totalElement.textContent = `Rs. ${total}`;
+    }
+
+    quantities.forEach((input) => {
+        input.addEventListener('input', function () {
+            updatePrices();
+        });
     });
+
+    removeButtons.forEach((button) => {
+        button.addEventListener('click', function (event) {
+            const index = event.target.dataset.index; 
+            const row = event.target.closest('tr'); 
+            row.remove(); 
+            updatePrices(); 
+        });
+    });
+
+    updatePrices();
 });
+
+
+
+
+
+
 
 
   

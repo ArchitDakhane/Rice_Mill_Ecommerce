@@ -45,54 +45,99 @@
     </nav>
   
     <!-- ========== End Nav Section ========== -->
-    
-    <h1>Shopping Cart</h1>
-    <div class="cart-container">
-        <table>
-            <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th></th>
-            </tr>
-            
-            <!-- Add items here -->
-            <tr>
-                <td>Basmati Rice</td>
-                <td>Rs. 450</td>
-                <td>2</td>
-                <td>Rs. 900</td>
-                <td><a href="#">Remove</a></td>
-            </tr>
-            <tr>
-                <td>Kolam Rice</td>
-                <td>Rs. 500</td>
-                <td>1</td>
-                <td>Rs. 500</td>
-                <td><a href="#">Remove</a></td>
-            </tr>
-            
-            <tr>
-                <td colspan="3">Subtotal</td>
-                <td>Rs. 1400</td>
-            </tr>
 
-            <tr>
-                <td colspan="3">Shipping</td>
-                <td>Rs. 100</td>
-            </tr>
-            
-            <tr>
-                <td colspan="3">Total</td>
-                <td>Rs. 1500</td>
-            </tr>
-            
-        </table>
-        
-        <a href="#">Continue Shopping</a>
-        <a href="#">Checkout</a>
+    <!-- ========== Cart Start Section ========== -->
+
+    <div class="cart-header">
+        <h1>Shopping Cart</h1>
     </div>
+    
+    <div class="small-container cart-page">
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../Images/basmatiRice.png" alt="Basmati Rice">
+                            <div>
+                                <p>Basmati Rice</p>
+                                <small>Price: Rs.450</small>
+                                <br>
+                                <a href="#" class="remove-item" data-index="0">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>5kg</td>
+                    <td><input type="number" value="1" class="quantity" data-index="0"></td>
+                    <td class="subtotal">Rs. 450</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../Images/kolamRice.png" alt="Kolam Rice">
+                            <div>
+                                <p>Kolam Rice</p>
+                                <small>Price: Rs.350</small>
+                                <br>
+                                <a href="#" class="remove-item" data-index="1">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>5kg</td>
+                    <td><input type="number" value="1" class="quantity" data-index="1"></td>
+                    <td class="subtotal">Rs. 350</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../Images/HMTrice.png" alt="HMT Rice">
+                            <div>
+                                <p>HMT Rice</p>
+                                <small>Price: Rs.550</small>
+                                <br>
+                                <a href="#" class="remove-item" data-index="2">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>5kg</td>
+                    <td><input type="number" value="1" class="quantity" data-index="2"></td>
+                    <td class="subtotal">Rs. 550</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal">Rs.1350</td>
+                </tr>
+                <tr>
+                    <td>Delivery charges</td>
+                    <td>Rs.100</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total">Rs.1450</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="checkout-btn">
+            <a href="#" class="btn">Checkout</a>
+        </div>
+    </div>
+    
+
+    <!-- ========== Cart End Section ========== -->
 
     <!-- ========== Footer Start Section ========== -->
 
@@ -132,20 +177,6 @@
 
     <!-- ========== Footer End Section ========== -->
 
-    <script>
-        // Remove items from the cart
-        document.querySelectorAll('.cart-container a').forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                var row = link.parentElement.parentElement;
-                row.parentElement.removeChild(row);
-            });
-        });
-    </script>
-    
-    
-    
- 
 
 
 </body>
