@@ -93,7 +93,7 @@ a{
 }
 
 /* Width of line is fixed ie. 100% ..........  */
-.nav-links #ourRiceMill::after{
+/* .nav-links #ourRiceMill::after{
     content: "";
     position: absolute;
     bottom: -3px;
@@ -101,7 +101,7 @@ a{
     width: 100%;
     border-radius: 10px;
     border-bottom: 3px solid #73513a;
-}
+} */
 
 /* menu toggle */
 /* Menu toggle button for mobile view */
@@ -133,11 +133,12 @@ a{
     height:700px;
     width:100%; 
     object-fit:cover;
-    box-shadow: 9px 5px 9px black; 
+    /* box-shadow: 9px 5px 9px black;  */
+    margin-bottom: -4px;
 }
 .template-text{
     position: absolute;
-    top: 23%;
+    top: 22%;
     left: 50%;
     color: rgb(183, 198, 201);
     text-shadow: 1px 2px 2px gray;
@@ -157,7 +158,7 @@ a{
 }
 .container{
     color: #73513a;
-    margin:0% 20% 20% ; 
+    margin:0% 15% 20% ; 
     word-spacing: 5px;
     padding-bottom: 40px;
     margin-bottom: 0px;
@@ -168,34 +169,12 @@ h1{
     font-size: 40px;
     text-align: center;
     margin: 50px 0;
+    padding-top: 100px;
 }
 .container p{
     font-size: 20px;
     margin: 0% 5%;
     text-align: start;
-}
-.export-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-    align-items: center;
-    place-self: center;
-    gap: 2px;
-    margin: 0% 5%;
-}
-.export-content {
-    & img{
-        width: 350px;
-        height: 300px;
-        border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -moz-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -o-border-radius: 8px;
-        margin: 0px -20px 60px 50px;
-    }
-    & p{
-        margin:-10% 0% 0% 8px;
-    }
 }
 
 /*......... Start css of ourRiceMill page Section .........*/  
@@ -259,11 +238,32 @@ h1{
 /*............ End css of ourRiceMill page Section ..................*/
 
 /*........................Start css of Export page Section ........................*/ 
+.export-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    align-items: center;
+    place-self: center;
+    gap: 3px;
+    margin: 0% 5%;
+    & img{
+        width: 350px;
+        height: 300px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        margin: 0px -20px 60px 50px;
+    }
+    & p{
+        margin:-10% 0% 0% 20px;
+    }
+}
 
 .export-details{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-    column-gap: 4%;
+    grid-template-columns: repeat(auto-fit,minmax(190px, 1fr));
+    column-gap: 3%;
     row-gap: 9%;
     place-items: center;
     margin-bottom: 15%;
@@ -271,10 +271,12 @@ h1{
     & p{
         font-size: large;
        justify-items: center;
+       
     } 
 
     & img{
         width: 140px;
+        margin-left: -15%;
     }
     & .block-2{
         margin-top: 1px;
@@ -285,7 +287,7 @@ h1{
     }
     & .block-4{
         align-items: center;
-        margin-top: 15px;
+        margin-top: 15px; 
         & p {
             margin-top: 0px;
         }
@@ -293,9 +295,40 @@ h1{
 }
 
 .export-form{
-    
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax( 260px,1fr));
+    column-gap: 30%;
+    row-gap: 3%;
+    width: 110%;
+    text-align: left;
+    margin-top: 20%;
+    
+    & .title{
+        margin-top: 40%;
+        width: 200%;
+        color: white;
+        margin-left: -20%;
+    }
+
+    & form {
+        & input ,button{
+            line-height: 40px;
+            margin:9px 0px;
+            width: 360px;
+            padding: 2px 6px 2px 2px;
+            font-size: large;
+        }
+        & button {
+            margin-top: 12%;
+            width: 250px;
+            margin-left: 24%;
+            background-color:rgb(0, 150, 110);
+            color: white;
+            font-weight: 800;
+
+        }
+        text-align:center ;
+    }
 }
 
 /*........................ End css of Export page Export Section ........................*/
@@ -645,7 +678,7 @@ footer {
 
     /* OurRiceMill */
     .template-container{
-        margin-top: 100px;
+        margin-top:85px;
     }
     .template-text {
         left: 10%;
