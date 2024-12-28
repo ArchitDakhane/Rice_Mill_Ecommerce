@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     stats.forEach(stat => {
         const endValue = parseInt(stat.textContent.replace(/\D/g, ""));
         let currentValue = 0;
-        const increment = Math.ceil(endValue / 100); // Divide the total value into 100 increments
+        const increment = Math.ceil(endValue / 100); 
 
         const updateValue = () => {
             currentValue += increment;
@@ -41,9 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
             stat.textContent = currentValue + "+";
         };
 
-        const timer = setInterval(updateValue, 20); // Update every 20ms
+        const timer = setInterval(updateValue, 20); 
     });
 });
+
+// Cart
+document.querySelectorAll('.cart-container a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var row = link.parentElement.parentElement;
+        row.parentElement.removeChild(row);
+    });
+});
+
+
+  
 
 
 

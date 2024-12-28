@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basmati Rice</title>
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../Product-Details/style.css">
+    <script src="../Product-Details/script.js"></script>
+</head>
+<body>
+        <!-- ========== Start Nav Section ========== -->
+
+        <nav class="navbar" id="myTopnav">
+            <div class="nav-links">
+              <ul>
+                <a href="#"><img class="image" src="../Images/logo.png" alt="Logo" /></a>
+                <a href="../Frontend/index.html"><li class="nav-content">Home</li></a>
+                <a href="#"><li class="nav-content">About Us</li></a>
+                <a href="#"><li class="nav-content">Our Rice Mill</li></a>
+                <a href="#"><li class="nav-content">Products</li></a>
+                <a href="#"><li class="nav-content">Export</li></a>
+                <a href="#"><li class="nav-content">Contact Us</li></a>
+      
+                <div class="nav-icons">
+                  <a href="#" class="icon" onclick="navbar()">
+                    <i class="fa fa-bars"></i>
+                  </a>  
+                  <a href="../Frontend/cart.html"
+                    ><button><i class="fa-solid fa-cart-shopping"></i></button>   
+                  </a>
+                  <a href="#">
+                    <button><i class="fa-solid fa-user"></i></button>
+                  </a>
+                </div>
+    
+              </ul>
+            </div>
+        </nav>
+      
+        <!-- ========== End Nav Section ========== -->
+
+        <!-- ========== Product Details Start Section ========== -->
+
+        <div class="container">
+
+            <div class="image-container">
+                <img src="../Images/HMTrice.png" alt="HMT Rice">
+            </div>
+
+            <div class="product-details">
+                <div class="product-info">
+                    <h2>HMT Rice</h2>
+                    <p>HMT rice, cultivated with care in the lush fields of Brahmapuri, offers an unmatched taste, texture, and quality.
+                        Perfectly grown at 18-22°C (64-75°F) and 45-60% relative humidity, our premium grains ensure a delightful dining
+                        experience every time.</p>
+                </div>
+
+                <div class="product-sizes">
+                    <h3>Available Sizes:</h3>
+                    <label><input type="radio" name="size" value="5kg"> 5kg</label>
+                    <label><input type="radio" name="size" value="10kg"> 10kg</label>
+                    <label><input type="radio" name="size" value="25kg"> 25kg</label>
+                    <label><input type="radio" name="size" value="30kg"> 30kg</label>
+                </div>
+
+                <div class="product-quantity">
+                    <h3>Quantity:</h3>
+                    <input type="number" id="quantity" value="1" min="1">
+                </div>
+
+                <div class="product-price">
+                    <h3>Rs. <span id="price">550</span></h3>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn buy-now">Buy Now</button>
+
+                </div>
+                
+                <div class="product-rating">
+                    <h3>Rating</h3>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                
+                <div class="product-tags">
+                    <h2>Tags</h2>
+                    <div class="tag">
+                        <a href="#">Healthy</a>
+                        <a href="#">Tasty</a>
+                        <a href="#">Affordable</a>
+                    </div>
+                </div>
+
+                <div class="product-share">
+                    <h3>Share</h3>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+
+        <div class="reviews-section">
+            <h2>Reviews</h2>
+
+            <div class="review-user">
+                <h4>Prashant Naik</h4>
+                <p>This rice is absolutely divine! The taste and texture are perfect. I highly recommend it to everyone.</p>
+                <div class="review-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="review-date">
+                    <i class="fa-solid fa-calendar-alt"></i> 2023-05-15
+                </div>
+            </div>
+
+            <div class="review-user">
+                <h4>Prashant Naik</h4>
+                <p>This rice is absolutely divine! The taste and texture are perfect. I highly recommend it to everyone.</p>
+                <div class="review-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="review-date">
+                    <i class="fa-solid fa-calendar-alt"></i> 2023-05-15
+                </div>
+            </div>  
+
+                <div class="review-user">
+                    <h4>Prashant Naik</h4>
+                    <p>This rice is absolutely divine! The taste and texture are perfect. I highly recommend it to everyone.</p>
+                    <div class="review-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="review-date">
+                        <i class="fa-solid fa-calendar-alt"></i> 2023-05-15
+                    </div>
+                </div>  
+
+                <div class="review-user">
+                    <h4>Prashant Naik</h4>
+                    <p>This rice is absolutely divine! The taste and texture are perfect. I highly recommend it to everyone.</p>
+                    <div class="review-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="review-date">
+                        <i class="fa-solid fa-calendar-alt"></i> 2023-05-15
+                    </div>
+                </div>  
+                
+                <div class="review-user">
+                    <h4>Prashant Naik</h4>
+                    <p>This rice is absolutely divine! The taste and texture are perfect. I highly recommend it to everyone.</p>
+                    <div class="review-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="review-date">
+                        <i class="fa-solid fa-calendar-alt"></i> 2023-05-15
+                    </div>
+                </div>  
+        </div>
+
+        <!-- ========== Product Details End Section ========== -->
+        
+
+
+         <!-- ========== Footer Start Section ========== -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="../Images/logo.png" alt="Logo" >
+                <h3>About Us</h3>
+                <p>Gajanan Maharaj Rice Mill is a premium rice brand that has a stronghold in the Brahmapuri region. We use the best machinery in
+                    class to produce rice of the highest grade.</p>
+            </div>
+
+            <div class="footer-contact-us">
+                <h3>Get In Touch</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i>JV7G+G8Q, Maharashtra 441206</li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:gajananricemill@gmail.com">gajananricemill@gmail.com</a></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:+919423123213">+91 9423123213</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="margin: 0;">&copy; 2024 GajananRiceMill | All Rights Reserved</p>
+        </div>
+        
+    </footer>
+
+    <!-- ========== Footer End Section ========== -->
+</body>
+</html>
