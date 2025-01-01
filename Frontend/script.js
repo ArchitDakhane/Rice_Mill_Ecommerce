@@ -1,6 +1,8 @@
 // Navbar
 
 
+  
+
 
 
 // Slideshows
@@ -99,6 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updatePrices();
 });
+
+// profile
+
+  
 
 
 
