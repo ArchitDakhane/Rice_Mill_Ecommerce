@@ -1,0 +1,512 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #73513a;
+} 
+
+
+/***** Navbar Section *****/ 
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; 
+    z-index: 1;  
+}
+
+.nav-links ul {
+    font-family: Inter, sans-serif; 
+    font-weight: 600;
+    font-size:15px;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    list-style: none;
+
+    & a li{
+        position: relative;
+    } 
+}
+
+.nav-content {
+    position: relative;
+    font-weight: bold;
+}
+
+.nav-content::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left:0;
+    width: 0%;
+    border-radius: 10px;
+    border-bottom: 3px solid #73513a;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.nav-content:hover::after{
+    width: 100%;
+}
+
+.nav-icons {
+    display: none;
+    margin-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+    & button{
+        color: #73513a;
+        border: none;
+        font-size: 20px;
+        background-color:white;
+    }  
+}
+
+.image{
+    margin-left: 30px;
+    width: 80px;
+    border-radius:100%;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    -ms-border-radius:100%;
+    -o-border-radius:100%;
+}
+
+button:active{
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+}
+
+@media screen and (max-width: 600px) {
+    .navbar ul:not(:first-child) {display: none}
+    .navbar .nav-icons {
+        float: right;
+        display: block;
+    }   
+}
+
+@media screen and (max-width:600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+} 
+
+
+/************************ End Navbar Section *****************/
+
+/***** Product Details Section *****/ 
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 120px;
+    color: #73513a;
+}
+
+.image-container img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.product-details {
+    line-height: 1.8;
+    margin-left: 50px;
+}
+
+.product-info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.product-info p {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-sizes {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.product-sizes label, .product-tags a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product-sizes label {
+    margin-top: 9px;
+}
+
+.product-sizes input {
+    margin-right: 10px;
+}
+
+.product-quantity {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.product-price {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-price button {
+    background-color: #73513a;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.product-rating {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.product-tags {
+    margin-bottom: 20px;
+}
+
+.product-tags a {
+    padding: 5px 10px;
+    background: #eaeaea;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #73513a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #543821;
+}
+
+.product-rating .fa {
+    color: gold;
+}
+
+.product-rating .fa:not(.checked) {
+    color: #ddd;
+}
+
+.product-share {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.product-share a {
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.product-share a:hover {
+    color: #833AB4;
+}
+
+.product-share .fa-whatsapp {
+    color: #128C7E;
+}
+
+.product-share .fa-instagram {
+    color: #833AB4;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #333;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    border-color: #73513a;
+    box-shadow: 0 4px 8px rgba(115, 81, 58, 0.2);
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #73513a;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+input[type="radio"]:checked {
+    background-color: #73513a;
+    border-color: #73513a;
+}
+
+input[type="radio"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/***** Product Details End Section *****/
+
+
+/***** Reviews Section *****/ 
+
+.reviews-section {
+    text-align: center;
+    margin-top: 50px;
+    color: #73513a;
+    padding: 30px;
+    margin-bottom: 80px;
+    line-height: 1.9;
+}
+
+.reviews-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.review-user {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review-user h4 {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.review-user p {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.review-rating {
+    gap: 10px;
+}
+
+.review-date {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** End Reviews Section *****/
+
+
+
+
+/********************** Footer Section *********************/ 
+
+footer {
+    background-color: rgb(115, 80, 57); 
+    color: white; 
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.footer-about {
+    max-width: 500px;
+}
+
+.footer-about h3 {
+    margin-top: 8px;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.footer-about p {
+    font-size: 18px;
+    line-height: 1.6;
+    /* margin-top: 5px; */
+    font-family: Inter, sans-serif;
+}
+
+.footer-about img {
+    margin-top: 8px;
+    max-width: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+.footer-contact-us , 
+.footer-social h3 {
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    color: white;
+}
+
+.footer-contact-us {
+    margin: auto;
+    margin-top: 30px;
+    padding-right: 50px;
+}
+
+.footer-contact-us ul {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    line-height: 35px;
+}
+
+.footer-contact-us ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.footer-contact-us ul li {
+    font-size: 18px;
+}
+
+.footer-contact-us .fa-solid {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.footer-social {
+    margin: auto;
+    margin-top: 30px;
+    margin: 0 ;
+}
+
+.footer-social-icons {
+    margin-top: 20px;
+}
+
+.footer-social .footer-social-icons a {
+    font-size: 29px;
+    margin-right: 20px;
+    color: azure;
+}
+
+.footer-social-icons .fa-whatsapp {
+    color: #128C7E;
+}
+
+.footer-social-icons .fa-instagram {
+    color: #833AB4;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: rgb(221, 227, 227);
+    border-top: 1px solid #ba9e9e;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+}
+
+ /***** End Footer Section *****/

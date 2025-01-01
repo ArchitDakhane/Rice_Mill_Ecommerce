@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- ========== Start Nav Section ========== -->
+
+    <nav class="navbar" id="myTopnav">
+        <div class="nav-links">
+          <ul>
+            <a href="#"><img class="image" src="../Images/logo.png" alt="Logo" /></a>
+            <a href="index.html"><li class="nav-content">Home</li></a>
+            <a href="#"><li class="nav-content">About Us</li></a>
+            <a href="#"><li class="nav-content">Our Rice Mill</li></a>
+            <a href="#"><li class="nav-content">Products</li></a>
+            <a href="#"><li class="nav-content">Export</li></a>
+            <a href="#"><li class="nav-content">Contact Us</li></a>
+  
+            <div class="nav-icons">
+              <a href="#" class="icon" onclick="navbar()">
+                <i class="fa fa-bars"></i>
+              </a>  
+              <a href="./cart.html"
+                ><button><i class="fa-solid fa-cart-shopping"></i></button>   
+              </a>
+              <a href="#">
+                <button style="cursor: pointer;"><i class="fa-solid fa-user"></i></button>
+              </a>
+            </div>
+
+          </ul>
+        </div>
+    </nav>
+  
+    <!-- ========== End Nav Section ========== -->
+
+    <!-- ========== Cart Start Section ========== -->
+
+    <div class="cart-header">
+        <h1>Shopping Cart</h1>
+    </div>
+    
+    <div class="small-container cart-page">
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../Images/basmatiRice.png" alt="Basmati Rice">
+                            <div>
+                                <p>Basmati Rice</p>
+                                <small>Price: Rs.450</small>
+                                <br>
+                                <a href="#" class="remove-item" data-index="0">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>5kg</td>
+                    <td><input type="number" value="1" class="quantity" data-index="0"></td>
+                    <td class="subtotal">Rs. 450</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../Images/kolamRice.png" alt="Kolam Rice">
+                            <div>
+                                <p>Kolam Rice</p>
+                                <small>Price: Rs.350</small>
+                                <br>
+                                <a href="#" class="remove-item" data-index="1">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>5kg</td>
+                    <td><input type="number" value="1" class="quantity" data-index="1"></td>
+                    <td class="subtotal">Rs. 350</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../Images/HMTrice.png" alt="HMT Rice">
+                            <div>
+                                <p>HMT Rice</p>
+                                <small>Price: Rs.550</small>
+                                <br>
+                                <a href="#" class="remove-item" data-index="2">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>5kg</td>
+                    <td><input type="number" value="1" class="quantity" data-index="2"></td>
+                    <td class="subtotal">Rs. 550</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal">Rs.1350</td>
+                </tr>
+                <tr>
+                    <td>Delivery charges</td>
+                    <td>Rs.100</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total">Rs.1450</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="checkout-btn">
+            <a href="#" class="btn">Checkout</a>
+        </div>
+    </div>
+    
+
+    <!-- ========== Cart End Section ========== -->
+
+    <!-- ========== Footer Start Section ========== -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="../Images/logo.png" alt="Logo" >
+                <h3>About Us</h3>
+                <p>Gajanan Maharaj Rice Mill is a premium rice brand that has a stronghold in the Brahmapuri region. We use the best machinery in
+                    class to produce rice of the highest grade.</p>
+            </div>
+
+            <div class="footer-contact-us">
+                <h3>Get In Touch</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i>JV7G+G8Q, Maharashtra 441206</li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:gajananricemill@gmail.com">gajananricemill@gmail.com</a></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:+919423123213">+91 9423123213</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="margin: 0;">&copy; 2024 GajananRiceMill | All Rights Reserved</p>
+        </div>
+        
+    </footer>
+
+    <!-- ========== Footer End Section ========== -->
+
+
+
+</body>
+</html>
