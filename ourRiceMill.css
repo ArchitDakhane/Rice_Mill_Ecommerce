@@ -177,7 +177,7 @@ h1{
     margin-bottom: 15%;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     row-gap: 50px;
     column-gap: 50px;
     & div{
@@ -208,7 +208,7 @@ h1{
 /* Infrastructure Images */
 .infra-images{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     column-gap: 70px;
     row-gap: 70px;
     margin: 9rem 0px 50px;
@@ -233,23 +233,28 @@ h1{
 /*........................Start css of Export page Section ........................*/ 
 .export-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(445px,1fr));
     align-items: center;
     place-self: center;
     gap: 3px;
-    margin: 0% 5%;
+    row-gap: 90px;
+    width:85%;
+    height: 400px;
+    padding: 0px 9px 0px 30px;
+    margin: 0px 0px -40px;
     & img{
-        width: 350px;
-        height: 300px;
+        width: 90%;
+        height:300px !important;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
         -ms-border-radius: 8px;
         -o-border-radius: 8px;
-        margin: 0px -20px 60px 50px;
+
     }
     & p{
-        margin:-10% 0% 0% 20px;
+        margin:-20% 2% 0% 10px;
+        padding:6% 9% 0% 0%;
     }
 }
 
@@ -288,21 +293,27 @@ h1{
 
 .export-form{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax( 260px,1fr));
-    column-gap: 30%;
+    grid-template-columns: repeat(auto-fit,minmax( 450px,1fr));
+    column-gap: 80px;
     row-gap: 3%;
-    width: 110%;
+    width: 130%;
     text-align: left;
-    margin-top: 20%;
-    
+    margin-top: 10%;
+    place-self: center;
     & .title{
-        margin-top: 40%;
-        width: 200%;
+        position: relative;
+        top: 50%;
+        width: 150%;
         color: white;
-        margin-left: -20%;
-    }
+        transform: translateY(-30%);
+        -webkit-transform: translateY(-30%);
+        -moz-transform: translateY(-30%);
+        -ms-transform: translateY(-30%);
+        -o-transform: translateY(-30%);
+}
 
     & form {
+        place-self: center;
         & input ,button{
             line-height: 40px;
             margin:9px 0px;
@@ -313,7 +324,6 @@ h1{
         & button {
             margin-top: 12%;
             width: 250px;
-            margin-left: 24%;
             background-color:rgb(0, 150, 110);
             color: white;
             font-weight: 800;
@@ -327,9 +337,10 @@ h1{
 
 /*........................Start css of AboutUS  page Section ........................*/
 
+/* add parent class */
 .p1 , .p2, .p3{
-    text-indent:10% ;
-    line-height:30px ;
+        /* text-indent:10% ;
+        line-height:30px ; */
 }
 figcaption{
     width: 350px;
@@ -350,9 +361,7 @@ figcaption{
         margin-top: -50px;
     }
 }
-.ourVision{
 
-}
 
 /*........................ End css of AboutUS page Section ........................*/
 
